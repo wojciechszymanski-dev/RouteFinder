@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\WS\\source\\repos\\RouteFinder\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7E3BA97E-0E05-487B-8937-3CB5647D9C00}|RouteFinder.csproj|c:\\users\\ws\\source\\repos\\routefinder\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E3BA97E-0E05-487B-8937-3CB5647D9C00}|RouteFinder.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E3BA97E-0E05-487B-8937-3CB5647D9C00}|RouteFinder.csproj|c:\\users\\ws\\source\\repos\\routefinder\\resources\\class\\myline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E3BA97E-0E05-487B-8937-3CB5647D9C00}|RouteFinder.csproj|solutionrelative:resources\\class\\myline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E3BA97E-0E05-487B-8937-3CB5647D9C00}|RouteFinder.csproj|c:\\users\\ws\\source\\repos\\routefinder\\resources\\class\\drawimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E3BA97E-0E05-487B-8937-3CB5647D9C00}|RouteFinder.csproj|solutionrelative:resources\\class\\drawimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E3BA97E-0E05-487B-8937-3CB5647D9C00}|RouteFinder.csproj|c:\\users\\ws\\source\\repos\\routefinder\\resources\\class\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E3BA97E-0E05-487B-8937-3CB5647D9C00}|RouteFinder.csproj|solutionrelative:resources\\class\\node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E3BA97E-0E05-487B-8937-3CB5647D9C00}|RouteFinder.csproj|c:\\users\\ws\\source\\repos\\routefinder\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7E3BA97E-0E05-487B-8937-3CB5647D9C00}|RouteFinder.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "myLine.cs",
+              "DocumentMoniker": "C:\\Users\\WS\\source\\repos\\RouteFinder\\Resources\\Class\\myLine.cs",
+              "RelativeDocumentMoniker": "Resources\\Class\\myLine.cs",
+              "ToolTip": "C:\\Users\\WS\\source\\repos\\RouteFinder\\Resources\\Class\\myLine.cs",
+              "RelativeToolTip": "Resources\\Class\\myLine.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T04:32:25.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Node.cs",
+              "DocumentMoniker": "C:\\Users\\WS\\source\\repos\\RouteFinder\\Resources\\Class\\Node.cs",
+              "RelativeDocumentMoniker": "Resources\\Class\\Node.cs",
+              "ToolTip": "C:\\Users\\WS\\source\\repos\\RouteFinder\\Resources\\Class\\Node.cs",
+              "RelativeToolTip": "Resources\\Class\\Node.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T14:12:07.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DrawImplementation.cs",
+              "DocumentMoniker": "C:\\Users\\WS\\source\\repos\\RouteFinder\\Resources\\Class\\DrawImplementation.cs",
+              "RelativeDocumentMoniker": "Resources\\Class\\DrawImplementation.cs",
+              "ToolTip": "C:\\Users\\WS\\source\\repos\\RouteFinder\\Resources\\Class\\DrawImplementation.cs",
+              "RelativeToolTip": "Resources\\Class\\DrawImplementation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T14:08:32.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\WS\\source\\repos\\RouteFinder\\MainPage.xaml",
+              "RelativeDocumentMoniker": "MainPage.xaml",
+              "ToolTip": "C:\\Users\\WS\\source\\repos\\RouteFinder\\MainPage.xaml",
+              "RelativeToolTip": "MainPage.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-13T14:08:32.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\WS\\source\\repos\\RouteFinder\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\WS\\source\\repos\\RouteFinder\\MainPage.xaml.cs",
+              "RelativeToolTip": "MainPage.xaml.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAuwFoAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T14:08:32.609Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
