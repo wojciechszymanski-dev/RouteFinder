@@ -10,14 +10,14 @@ namespace RouteFinder.Resources.Class
     {
         // change from start/end points to node id's 
         public int ID { get; set; }
-        public double[] StartPoint { get; set; }
-        public double[] EndPoint { get; set; }
+        public int startNodeID { get; set; }
+        public int endNodeID { get; set; }
 
-        public myLine(int id, double[] startPoint, double[] endPoint)
+        public myLine(int id, int startNodeID, int endNodeID)
         {
             this.ID = id;
-            this.StartPoint = startPoint;
-            this.EndPoint = endPoint;
+            this.startNodeID = startNodeID;
+            this.endNodeID = endNodeID;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Maui.Graphics;
 using RouteFinder.Resources.Class;
+using System.Diagnostics;
 
 namespace RouteFinder
 {
@@ -9,7 +10,7 @@ namespace RouteFinder
         public double[] endPoint = { 0, 0 };
         public double[] basePoint = { 0, 0 };
         public Dictionary<int, Node> Nodes { get; } = new();
-        public List<myLine> Lines { get; } = new List<myLine>(); 
+        public Stack<myLine> Lines { get; } = new(); 
 
         public void Draw(ICanvas canvas, RectF dirtyRect)
         {
@@ -22,16 +23,19 @@ namespace RouteFinder
                 canvas.FillCircle((float)node.PosX, (float)node.PosY, 20);
             }
 
-            // Draw lines
-            foreach (var line in Lines)
-            {
-                canvas.StrokeColor = Colors.White;
-                canvas.DrawLine((float)line.StartPoint[0], (float)line.StartPoint[1], (float)line.EndPoint[0], (float)line.EndPoint[1]);
-            }
-
             // Draw dynamic line
             canvas.StrokeColor = Colors.White;
             canvas.DrawLine((float)basePoint[0], (float)basePoint[1], (float)endPoint[0], (float)endPoint[1]);
+
+            // Draw lines
+            foreach (var line in Lines.Reverse())
+            {
+                Debug.WriteLine(line.ID);
+                if (line.startNodeID != -1 && line.endNodeID != -1)
+                {
+                    canvas.DrawLine((float)Nodes[line.startNodeID].PosX, (float)Nodes[line.startNodeID].PosY, (float)Nodes[line.endNodeID].PosX, (float)Nodes[line.endNodeID].PosY);
+                }
+            }
         }
     }
 }

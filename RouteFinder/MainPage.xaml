@@ -24,7 +24,7 @@
             </VerticalStackLayout>
 
             <VerticalStackLayout>
-                <Label>TEXT</Label>
+                <Label x:Name="babell">TEXT</Label>
             </VerticalStackLayout>
             
         </Grid>

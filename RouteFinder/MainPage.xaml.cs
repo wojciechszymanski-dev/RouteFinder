@@ -2,6 +2,7 @@
 using RouteFinder.Resources.Class;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace RouteFinder
 {
@@ -9,7 +10,7 @@ namespace RouteFinder
     {
         readonly DrawImplementation drawInstance;
         internal Dictionary<int, Node> Nodes { get; } = new();
-        internal Dictionary<int, myLine> Lines { get; } = new();
+        internal Stack<myLine> Lines { get; } = new();
         int id = 0;
         int lineID = 0;
         double baseX;
@@ -73,13 +74,15 @@ namespace RouteFinder
         private void PanUpdated(object sender, PanUpdatedEventArgs e)
         {
             var tappedEventArgs = new TappedEventArgs(e);
+            int startNodeID = -1;
+            int endNodeID = -1;
             switch (e.StatusType)
             {
                 case GestureStatus.Started:
-                    int id1 = FindNearest(false);
-                    if (id1 != -1)
+                    startNodeID = FindNearest(false);
+                    if (startNodeID != -1)
                     {
-                        drawInstance.basePoint = new double[] { drawInstance.Nodes[id1].PosX, drawInstance.Nodes[id1].PosY };
+                        drawInstance.basePoint = new double[] { drawInstance.Nodes[startNodeID].PosX, drawInstance.Nodes[startNodeID].PosY };
                         drawInstance.endPoint = drawInstance.basePoint;
                         Canvas.Invalidate();
                     }
@@ -87,34 +90,41 @@ namespace RouteFinder
 
                 case GestureStatus.Running:
                     int id2 = FindNearest(false);
-                    drawInstance.endPoint = new double[] { drawInstance.basePoint[0] + e.TotalX, drawInstance.basePoint[1] + e.TotalY };
-                    if (id2 != -1) 
-                        drawInstance.endPoint = new double[] { drawInstance.Nodes[id2].PosX + e.TotalX, drawInstance.Nodes[id2].PosY + e.TotalY };
-                    Canvas.Invalidate();
+                    if(id2 != -1)
+                    {
+                        drawInstance.endPoint = new double[] { drawInstance.basePoint[0] + e.TotalX, drawInstance.basePoint[1] + e.TotalY };
+                        Canvas.Invalidate();
+                    }
+                    
                     break;
 
                 case GestureStatus.Completed:
-                    // TODO: create snapping effetct for the ending node
-                    int id3 = FindNearest(false);
-                    myLine lineInstance = new myLine(lineID, drawInstance.basePoint, drawInstance.endPoint);
-                    drawInstance.Lines.Add(lineInstance);
-                    Canvas.Invalidate();
+                    // TODO: Fix disappearing lines
+                    endNodeID = FindNearest(true);
+                    if(endNodeID != -1)
+                    {
+                        drawInstance.endPoint = new double[] { drawInstance.Nodes[endNodeID].PosX, drawInstance.Nodes[endNodeID].PosY };
+                        myLine lineInstance = new myLine(lineID, startNodeID, endNodeID);
+                        drawInstance.Lines.Push(lineInstance);
+                        Canvas.Invalidate();
+                        lineID++;
+                    }
                     break;
             }
-            lineID++;
         }
-        
+
         private int FindNearest(bool isEnd)
         {
             double distance = double.MaxValue;
             double tmp;
             int selectedNodeID = -1;
+
             switch (isEnd)
             {
                 case true:
                     foreach (var node in drawInstance.Nodes.Values)
                     {
-                        tmp = CalculateDistance(node.PosX, node.PosY, 0, 0);
+                        tmp = CalculateDistance(node.PosX, node.PosY, drawInstance.endPoint[0], drawInstance.endPoint[1]);
                         if (tmp < distance)
                         {
                             distance = tmp;
@@ -125,7 +135,7 @@ namespace RouteFinder
                 case false:
                     foreach (var node in drawInstance.Nodes.Values)
                     {
-                        tmp = Math.Abs(CalculateDistance(node.PosX, node.PosY, drawInstance.basePoint[0], drawInstance.basePoint[1]));
+                        tmp = CalculateDistance(node.PosX, node.PosY, drawInstance.basePoint[0], drawInstance.basePoint[1]);
                         if (tmp < distance)
                         {
                             distance = tmp;
@@ -135,7 +145,9 @@ namespace RouteFinder
                     break;
             }
 
+            Debug.WriteLine(selectedNodeID);
             return selectedNodeID;
         }
+
     }
 }
