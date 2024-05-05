@@ -11,14 +11,16 @@ namespace RouteFinder.Resources.Class
         public int ID { get; set; }
         public double PosX { get; set; }
         public double PosY { get; set; }
-        public bool isSelected { get; set; }
+        public bool IsSelected { get; set; }
+        public string textValue {  get; set; }
 
-        public Node(int id, double posX, double posY)
+        public Node(int id, double posX, double posY, string textValue)
         {
             this.ID = id;
             this.PosX = posX;
             this.PosY = posY;
-            this.isSelected = false;
+            this.IsSelected = false;
+            this.textValue = textValue;
         }
     }
 }

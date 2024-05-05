@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RouteFinder")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+6631b4f42aa1e7bec775a718ab012fd5e5b0414c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+66c58effe41172bacbad437697630b935919fc09")]
 [assembly: System.Reflection.AssemblyProductAttribute("RouteFinder")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RouteFinder")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

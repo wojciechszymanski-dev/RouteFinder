@@ -4,29 +4,72 @@
              x:Class="RouteFinder.MainPage">
 
     <ScrollView>
-        <Grid RowSpacing="20" 
-              ColumnDefinitions="Auto,*">
-            
+        <Grid RowSpacing="20">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10"/>
+            </Grid.RowDefinitions>
+
             <VerticalStackLayout
                 BackgroundColor="Gray"
-                HeightRequest="300">
+                HeightRequest="600"
+                Grid.Row="2"
+                Grid.Column="1">
                 <GraphicsView 
-                    x:Name="Canvas"                 
+                    x:Name="Canvas"
                     HorizontalOptions="Fill"
                     MinimumHeightRequest="600" 
-                    MinimumWidthRequest="1200"
-                    Grid.Column="1">
+                    MinimumWidthRequest="1200">
                     <GraphicsView.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="CanvasTapped" NumberOfTapsRequired="1" />
+                        <TapGestureRecognizer Tapped="CanvasTapped" NumberOfTapsRequired="1"/>
                         <PanGestureRecognizer PanUpdated="PanUpdated" />
                     </GraphicsView.GestureRecognizers>
                 </GraphicsView>
             </VerticalStackLayout>
 
-            <VerticalStackLayout>
-                <Label x:Name="babell">TEXT</Label>
-            </VerticalStackLayout>
-            
+            <Label x:Name="babell" 
+                   Grid.Row="1"
+                   Grid.Column="1" 
+                   Text="Route Finder"
+                   FontSize="40"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"/>
+
+
+            <StackLayout Grid.Row="2" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" Spacing="20">
+                <Button x:Name="deleteNodeButton" 
+                        Clicked="DeleteNode"
+                        Background="Red"
+                        TextColor="White"
+                        Text="Delete Node"
+                        HorizontalOptions="Center"/>
+
+                <Button x:Name="setRouteStart" 
+                        Clicked="SetRoute"
+                        Background="MediumPurple"
+                        TextColor="White"
+                        Text="Set Route Start"
+                        HorizontalOptions="Center"/>
+
+                <Button x:Name="setRouteEnd" 
+                        Clicked="SetRoute"
+                        Background="DeepSkyBlue"
+                        TextColor="White"
+                        Text="Set Route End"
+                        HorizontalOptions="Center"/>
+
+            </StackLayout>
+
         </Grid>
     </ScrollView>
 </ContentPage>
