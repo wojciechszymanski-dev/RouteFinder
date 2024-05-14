@@ -11,13 +11,15 @@ namespace RouteFinder.Resources.Class
         public int ID { get; set; }
         public int StartID { get; set; }
         public int EndID { get; set; }
-        public int[] Path { get; set; }
-        public Route(int iD, int startID, int endID /*,int[] path*/)
+        public List<Node> NodePath { get; set; }
+        public List<MyLine> LinePath { get; set; }
+        public Route(int iD, int startID, int endID)
         {
             this.ID = iD;
             this.StartID = startID;
             this.EndID = endID;
-            //this.Path = path;
+            LinePath = new List<MyLine>();
+            NodePath = new List<Node>();
         }
     }
 }

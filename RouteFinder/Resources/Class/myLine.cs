@@ -12,6 +12,7 @@ namespace RouteFinder.Resources.Class
         public int ID { get; set; }
         public int startNodeID { get; set; }
         public int endNodeID { get; set; }
+        public double Length;
 
         public MyLine(int id, int startNodeID, int endNodeID)
         {

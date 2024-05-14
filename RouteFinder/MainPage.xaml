@@ -67,6 +67,14 @@
                         TextColor="White"
                         Text="Set Route End"
                         HorizontalOptions="Center"/>
+                
+                <Button x:Name="findShortestRoute" 
+                        Clicked="FindShortestRoute"
+                        Background="DeepSkyBlue"
+                        TextColor="White"
+                        Text="Find Shortest Route"
+                        HorizontalOptions="Center"/>
+                <Label x:Name="test"/>
 
             </StackLayout>
 

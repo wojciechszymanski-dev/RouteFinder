@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\wojci\Downloads\Files\Programming\Projects\App dev\RouteFinder\RouteFinder\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-05-05T17:55:11.099</Modified>
+      <Modified>2024-05-13T17:40:57.564</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\wojci\Downloads\Files\Programming\Projects\App dev\RouteFinder\RouteFinder\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-05-05T17:55:10.955</Modified>
+      <Modified>2024-05-13T17:40:57.422</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wojci\Downloads\Files\Programming\Projects\App dev\RouteFinder\RouteFinder\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\RouteFinder.runtimeconfig.json">
       <PackagePath>RouteFinder.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wojci\Downloads\Files\Programming\Projects\App dev\RouteFinder\RouteFinder\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\RouteFinder.dll">
       <PackagePath>RouteFinder.dll</PackagePath>
-      <Modified>2024-05-05T17:55:10.459</Modified>
+      <Modified>2024-05-13T17:40:56.934</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wojci\Downloads\Files\Programming\Projects\App dev\RouteFinder\RouteFinder\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>RouteFinder.exe</PackagePath>
-      <Modified>2024-05-05T17:55:10.462</Modified>
+      <Modified>2024-05-13T17:40:56.937</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wojci\Downloads\Files\Programming\Projects\App dev\RouteFinder\RouteFinder\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\RouteFinder.deps.json">
       <PackagePath>RouteFinder.deps.json</PackagePath>
